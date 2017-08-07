@@ -1,0 +1,49 @@
+:root{
+    --status-online-title: "Am Here!";
+    --status-idle-title: "Not here...";
+    --status-dnd: "When u are doin somethin important!";
+    --status-dnd-title: "LEAVE ME ALONE";
+    --status-invis: "Sneaky Ninja Moves.";
+    --status-invis-title: "Woooooosh";
+}
+
+/* Hide old text */
+.status-online ~ .status-text,
+.status-idle ~ .status-text,
+.status-dnd ~ .status-text,
+.status-invisible ~ .status-text,
+.status-picker .popout-menu-item:nth-child(4) .helper,
+.status-picker .popout-menu-item:nth-child(5) .helper {
+    font-size: 0;
+}
+
+/* Online */
+.status-online ~ .status-text::after {
+    content: var(--status-online-title);
+    font-size: 15px;
+}
+/* Idle */
+.status-idle ~ .status-text::after {
+    content: var(--status-idle-title);
+    font-size: 15px;
+}
+/* DnD */
+.status-dnd ~ .status-text::after {
+    content: var(--status-dnd-title);
+    font-size: 15px;
+}
+.status-picker .popout-menu-item:nth-child(4) .helper::after{
+    content: var(--status-dnd) !important;
+    font-size: 12px;
+}
+
+
+/* Invisible */
+.status-invisible ~ .status-text::after {
+    content: var(--status-invis-title);
+    font-size: 15px;
+}
+.status-picker .popout-menu-item:nth-child(5) .helper::after{
+    content: var(--status-invis) !important;
+    font-size: 12px;
+}
